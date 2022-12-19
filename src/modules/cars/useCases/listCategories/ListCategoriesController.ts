@@ -3,9 +3,8 @@ import { Request, Response } from "express";
 import { ListCategoriesUseCase } from "./ListCategoriesUseCase";
 
 class ListCategoriesController {
-  constructor(private listCategories: ListCategoriesUseCase) {
-    console.log("createCategoryUseCase");
-  }
+  // eslint-disable-next-line prettier/prettier
+  constructor(private listCategories: ListCategoriesUseCase) { }
 
   handle(request: Request, response: Response): Response {
     const all = this.listCategories.execute();

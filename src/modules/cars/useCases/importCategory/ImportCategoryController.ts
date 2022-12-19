@@ -3,9 +3,8 @@ import { Response, Request } from "express";
 import { ImportCategoryUseCase } from "./ImportCategoryUseCase";
 
 class ImportCategoryController {
-  constructor(private importCategoryUseCase: ImportCategoryUseCase) {
-    console.log("ImportCategoryController");
-  }
+  // eslint-disable-next-line prettier/prettier
+  constructor(private importCategoryUseCase: ImportCategoryUseCase) { }
   handle(request: Request, response: Response): Response {
     const { file } = request;
     this.importCategoryUseCase.execute(file);
